@@ -1,0 +1,209 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.projects {
+  padding: $spacing-xl 0;
+  background-color: $color-bg;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.label {
+  color: $color-accent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: $color-muted;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: $color-secondary;
+  border-radius: $border-radius-lg;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba($color-primary, 0.3);
+  }
+}
+
+.cardHeader {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ticketId {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $color-muted;
+  font-family: $font-mono;
+  font-size: 0.875rem;
+}
+
+.ticketType {
+  font-size: 0.75rem;
+  background: rgba($color-primary, 0.1);
+  color: $color-primary;
+  padding: 0.25rem 0.5rem;
+  border-radius: $border-radius-sm;
+  font-weight: 600;
+}
+
+.cardBody {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.projectDesc {
+  color: $color-muted;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.techBadge {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  color: $color-text;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: $border-radius-md;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statValue {
+  font-weight: 700;
+  color: $color-accent;
+  font-family: $font-mono;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: $color-muted;
+  text-transform: capitalize;
+}
+
+.codeWindow {
+  margin: 0 1.5rem;
+  background: #111;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  font-size: 0.8rem;
+  border: 1px solid #333;
+}
+
+.codeHeader {
+  background: #222;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #777;
+}
+
+.codeBlock {
+  padding: 1rem;
+  margin: 0;
+  overflow-x: auto;
+  color: #a9b7c6;
+  font-family: $font-mono;
+}
+
+.cardFooter {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.detailsBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $color-text;
+  
+  &:hover {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $color-accent;
+  font-size: 0.875rem;
+  font-weight: 600;
+}

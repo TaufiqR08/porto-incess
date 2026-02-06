@@ -1,0 +1,145 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: $spacing-sm 0;
+
+  &.scrolled {
+    @include glass;
+    padding: $spacing-xs 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: $color-primary;
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.logoName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.logoTitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $color-muted;
+  line-height: 1;
+}
+
+.desktopMenu {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.navLink {
+  color: $color-text;
+  font-weight: 500;
+  position: relative;
+  
+  &:hover {
+    color: $color-primary;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $color-primary;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.resumeBtn {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid $color-primary;
+  color: $color-primary;
+  border-radius: $border-radius-sm;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba($color-primary, 0.1);
+  }
+}
+
+.mobileToggle {
+  display: block;
+  color: $color-text;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  background: $color-secondary;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+.mobileLink {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: $color-text;
+  
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.mobileResumeBtn {
+  margin: 1rem 0;
+  text-align: center;
+  padding: 0.75rem;
+  background: $color-primary;
+  color: white;
+  border-radius: $border-radius-sm;
+  font-weight: 600;
+}

@@ -1,0 +1,109 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.about {
+  padding: $spacing-xl 0;
+  background-color: lighten($color-bg, 3%);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  gap: 4rem;
+
+  @include desktop {
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+  }
+}
+
+.intro {
+  position: sticky;
+  top: 100px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+
+  .highlight {
+    color: $color-primary;
+  }
+}
+
+.text {
+  color: $color-muted;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.8;
+
+  strong {
+    color: $color-text;
+    font-weight: 600;
+  }
+}
+
+.skillsGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.skillCard {
+  @include glass;
+  background: rgba($color-secondary, 0.4);
+  padding: 2rem;
+  border-radius: $border-radius-md;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba($color-primary, 0.5);
+    background: rgba($color-secondary, 0.7);
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.iconWrapper {
+  color: $color-primary;
+  background: rgba($color-primary, 0.1);
+  padding: 0.75rem;
+  border-radius: $border-radius-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.list {
+  list-style: none;
+}
+
+.listItem {
+  color: $color-muted;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '▹';
+    color: $color-accent;
+  }
+}

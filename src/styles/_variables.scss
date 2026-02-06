@@ -1,0 +1,25 @@
+// Colors
+$color-bg: #0a0a16;
+$color-text: #e0e0e0;
+$color-primary: #6366f1; // Deep Indigo
+$color-accent: #10b981; // Emerald Green (Pass)
+$color-danger: #ef4444; // Red (Fail/Bug)
+$color-secondary: #1e1e2e;
+$color-muted: #94a3b8;
+
+// Fonts
+$font-main: var(--font-geist-sans), sans-serif;
+$font-mono: var(--font-geist-mono), monospace;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+$spacing-xl: 8rem;
+
+// Borders
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-light: 1px solid rgba(255, 255, 255, 0.1);

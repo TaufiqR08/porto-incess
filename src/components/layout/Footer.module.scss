@@ -1,0 +1,35 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: $color-bg;
+  color: $color-muted;
+  font-size: 0.875rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $color-accent;
+  font-weight: 600;
+  font-family: $font-mono;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: $color-accent;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba($color-accent, 0.5);
+}
