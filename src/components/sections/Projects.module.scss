@@ -3,7 +3,7 @@
 
 .projects {
   padding: $spacing-xl 0;
-  background-color: $color-bg;
+  background-color: lighten($color-bg, 3%);
 }
 
 .container {
